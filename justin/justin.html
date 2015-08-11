@@ -1,0 +1,468 @@
+<html lang="en" class=""><head>
+	<meta charset="UTF-8">
+	<meta name="description" content="Pixave — The smartest way to organize your images.">
+	<meta name="keywords" content="pixave, organize, organizer, images, color, tag, image viewer">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	<title>Pixave — The smartest way to organize your images.</title>
+
+	<link rel="icon" href="images/favicon.ico">
+	<link rel="apple-touch-icon" href="apple-touch-icon.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="apple-touch-icon-76x76.png">
+	<link rel="apple-touch-icon" sizes="120x120" href="apple-touch-icon-120x120.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="apple-touch-icon-152x152.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon-180x180.png">
+	
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/styles2.css">
+	
+	<link rel="stylesheet" href="css/animate.min.css">
+	<link rel="stylesheet" href="css/styles.css">
+	<link rel="stylesheet" href="css/colors.css">
+	<link rel="stylesheet" href="css/responsive.css">
+
+<!--[if lt IE 9]>
+	<script src="js/html5shiv.js"></script>
+	<script src="js/respond.min.js"></script>
+<![endif]-->
+
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script><style type="text/css"></style>
+	
+	<!-- Add fancyBox main JS and CSS files -->
+	<script type="text/javascript" src="fancybox/jquery.fancybox.js?v=2.1.5"></script>
+	<link rel="stylesheet" type="text/css" href="fancybox/jquery.fancybox.css?v=2.1.5" media="screen">
+	
+	<!-- Add Media helper (this is optional) -->
+	<script type="text/javascript" src="fancybox/helpers/jquery.fancybox-media.js?v=1.0.6"></script>
+	
+	<script type="text/javascript">
+			$(document).ready(function()
+			{
+					$('.fancybox').fancybox();
+		
+					// Change title type, overlay closing speed
+					$(".fancybox-effects-a").fancybox({
+						helpers: {
+							title : {
+								type : 'outside'
+							},
+							overlay : {
+								speedOut : 0
+							}
+						}
+					});
+		
+					// Disable opening and closing animations, change title type
+					$(".fancybox-effects-b").fancybox({
+						openEffect  : 'none',
+						closeEffect	: 'none',
+		
+						helpers : {
+							title : {
+								type : 'over'
+							}
+						}
+					});
+		
+					// Set custom style, close if clicked, change title type and overlay color
+					$(".fancybox-effects-c").fancybox({
+						wrapCSS    : 'fancybox-custom',
+						closeClick : true,
+		
+						openEffect : 'none',
+		
+						helpers : {
+							title : {
+								type : 'inside'
+							},
+							overlay : {
+								css : {
+									'background' : 'rgba(238,238,238,0.85)'
+								}
+							}
+						}
+					});
+		
+					// Remove padding, set opening and closing animations, close if clicked and disable overlay
+					$(".fancybox-effects-d").fancybox({
+						padding: 0,
+		
+						openEffect : 'elastic',
+						openSpeed  : 150,
+		
+						closeEffect : 'elastic',
+						closeSpeed  : 150,
+		
+						closeClick : true,
+		
+						helpers : {
+							overlay : null
+						}
+					});
+		
+					$('.fancybox-buttons').fancybox({
+						openEffect  : 'none',
+						closeEffect : 'none',
+		
+						prevEffect : 'none',
+						nextEffect : 'none',
+		
+						closeBtn  : false,
+		
+						helpers : {
+							title : {
+								type : 'inside'
+							},
+							buttons	: {}
+						},
+		
+						afterLoad : function() {
+							this.title = 'Image ' + (this.index + 1) + ' of ' + this.group.length + (this.title ? ' - ' + this.title : '');
+						}
+					});
+	
+					$('.fancybox-media')
+						.attr('rel', 'media-gallery')
+						.fancybox({
+							openEffect : 'none',
+							closeEffect : 'none',
+							prevEffect : 'none',
+							nextEffect : 'none',
+		
+							arrows : false,
+							helpers : {
+								media : {},
+								buttons : {}
+							}
+						});
+					});
+		</script>
+<style type="text/css">.fancybox-margin{margin-right:15px;}</style></head>
+
+<body>
+
+<!-- preloader -->
+<div class="preloader" style="display: none;">
+  <div class="status" style="display: none;">&nbsp;</div>
+</div>
+<header class="header" id="home">
+<div class="solid-color full-screen" style="min-height: 768px;">
+	<div class="navbar navbar-inverse bs-docs-nav navbar-fixed-top sticky-navigation" style="top: 0px;">
+		<div class="container">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#kane-navigation">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				</button>
+
+				<a class="navbar-brand" href="#"><img src="images/pixave.png" alt="Pixave"></a>
+				
+			</div>
+			<div class="navbar-collapse collapse" id="kane-navigation">
+				<ul class="nav navbar-nav navbar-right main-navigation">
+					<li class="current"><a href="#overview">Overview</a></li>
+					<li class=""><a href="#features">More features</a></li>
+					<li><a href="#download">Get Pixave</a></li>
+					<li><a href="#support-and-feedback">Support</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div class="container">
+		<div class="row">
+				<div class="image-logo">
+					<img src="images/pixave-icon.jpg" alt="Pixave">
+				</div>
+				<div class="col-md-8 col-md-offset-2">
+					<div class="intro-section">
+						<h1 class="intro">Pixave – The smartest way to organize your images</h1>
+						<h5>Available on the Mac App Store</h5>
+	
+						<!-- Video Play -->
+						<a class="fancybox-media" href="https://youtu.be/fOKnBTLFSYM" rel="media-gallery"><i class="arrow_triangle-right_alt"></i>&nbsp;&nbsp;Watch the overview video</a>
+						
+						<!-- Download -->
+						<div class="buttons" id="download-button">
+							<a href="https://itunes.apple.com/app/id924891282?mt=12" target="_blank" title="Get Pixave on Mac App Store"><img src="images/mac-app-store.png" alt="Download Pixave on the Mac App Store"></a>
+						</div>
+						
+						<!-- Learn more -->
+						<div id="learn-more" class="local-scroll">
+							<a href="#overview" class="scroll-down"><i class="arrow_carrot-down scroll-down-icon"></i></a>
+						</div>
+					</div>
+				</div>
+		</div>
+	</div>
+</div>
+</header>
+
+<!-- OverView -->
+<section class="app box" id="overview">
+	<div class="container">
+		<div class="row">
+			<div class="section-header wow fadeIn animated animated" data-wow-duration="1.0s" style="visibility: visible; animation-duration: 1s; animation-name: fadeIn;">
+				<h2 class="dark-text">Stay Inspired</h2>
+				<div class="section-description">
+					<p>There is a whole world that we get from images. A single picture can fill us with inspiration which, in turn, brings us joy. Such impressions grow to create wonder and amazement for the world. That growth and creation is made possible by you. And Pixave is here to store and organize those inspired moments - to enable you to bring them to mind whenever, wherever you are.</p>
+				</div>
+			</div>
+			<div class="full-size-image">
+				<img src="images/pixave-overview.jpg" alt="Pixave">
+			</div>
+		</div>
+	</div>
+</section>
+
+<!-- A convenient workspace -->
+<section class="app box dark-gray-bg" id="interface">
+	<div class="container">
+			<div class="row">
+				<div class="section-header wow fadeIn animated animated" data-wow-duration="1.0s" style="visibility: visible; animation-duration: 1s; animation-name: fadeIn;">
+					<h2 class="white-text">A Convenient workspace</h2>
+					<div class="section-description-white">
+						<p>The basic purpose of Pixave is to provide the optimum environment to manage your images. But to judge its usefulness and convenience solely on its environment would be far from doing it justice. With the user-definable ‘Collection’ feature you manage your images, using folders to categorize to suit your needs. In addition, you can organize numerous images using the highly intelligent ‘Smart Collection’ feature and search for them instantly.</p>
+					</div>
+				</div>
+				<div class="full-size-image wow fadeIn animated animated" style="visibility: visible; animation-name: fadeIn;">
+					<img src="images/pixave-interface.jpg" alt="Pixave">
+				</div>
+				<div class="section-header wow fadeIn animated animated" data-wow-duration="1.0s" style="visibility: visible; animation-duration: 1s; animation-name: fadeIn;">
+					<div class="section-description-white">
+						<p>And that’s not all – Pixave remembers all your settings, including your selected ‘Collection’, the images and their sorting arrangement, the screen/window status, to restore them exactly as they were when you come back to work on your project. Such useful features lets you work in continuity with a streamlined workflow, whilst providing you with the workspace tailored to how you want it. Pixave’s innovative and useful workspace lays the groundwork for you to draw inspiration, unhindered, from your images - because your inspirations are precious and beautiful.</p>
+					</div>
+				</div>
+			</div>
+	</div>
+</section>
+
+<!-- Color! Color! Color! -->
+<section class="app box" id="color">
+	<div class="container">
+			<div class="row">
+				<div class="section-header wow fadeIn animated animated" data-wow-duration="1.0s" style="visibility: visible; animation-duration: 1s; animation-name: fadeIn;">
+					<h2 class="dark-text">Colors and Tags</h2>
+					<div class="section-description">
+						<p>There are many ways to search for images. However, Pixave presents an innovative, never-before-seen search function: welcome to the age of finding images according to color. The impressions left by the hues of an image play an important part in how one remembers it. Forget about groping to remember an image, just follow the color you are feeling and find yourself with the image that you wanted!</p>
+					</div>
+				</div>
+				<div class="full-size-image wow fadeIn animated animated" style="visibility: visible; animation-name: fadeIn;">
+					<img src="images/pixave-color-and-tag.jpg" alt="Pixave">
+				</div>
+				<div class="section-header wow fadeIn animated animated" data-wow-duration="1.0s" style="visibility: visible; animation-duration: 1s; animation-name: fadeIn;">
+					<div class="section-description">
+						<p>The world of accessing images through colors is thus opened up by Pixave. Furthermore, the Tag feature still functions exactly as you would expect. During import, Pixave receives all the OS X Tag information stored within the image, letting you easily add or delete Tags, as well as letting you conveniently organize them wherever the image is seen. Also, with a single click you can easily view any related images.</p>
+					</div>
+				</div>
+			</div>
+	</div>
+</section>
+
+<!-- Pixave Mini -->
+<section class="app box grey-bg" id="pixavemini">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-6 left-align wow fadeInRight animated animated" data-wow-duration="1.0s" style="visibility: visible; animation-duration: 1s; animation-name: fadeInRight;">
+				<h2 class="dark-text-small">The Tiny Giant – Pixave Mini</h2>
+				<p>Gathering images should be no labor. One should be able to collect any image, whether it is a file or from the web, easily and quickly. As the name suggests, Pixave Mini is a mini version of Pixave. It stays visible on the screen at all times and only requires you to drag a desired image to it, where it will collect the image without disturbing your workspace in the slightest. Such small feature will save you oodles of time, maximizing your efficiency. Thus, without too much exaggeration, Pixave mini can aptly be called the <strong>‘tiny giant’.</strong></p>
+			</div>
+			<div class="col-md-6 wow fadeInLeft animated animated" data-wow-duration="1.0s" style="visibility: visible; animation-duration: 1s; animation-name: fadeInLeft;">
+				<div class="right-image right-image1">
+					<img src="images/pixave-mini.jpg" alt="Pixave">
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<!-- Capture anything -->
+<section class="app" id="capture">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-6 wow fadeInLeft animated animated" data-wow-duration="1.0s" style="visibility: visible; animation-duration: 1s; animation-name: fadeInLeft;">
+				<div class="phone-image">
+					<img src="images/pixave-capture.jpg" alt="">
+				</div>
+			</div>
+			<div class="col-md-6 left-align wow fadeInRight animated animated" data-wow-duration="1.0s" style="visibility: visible; animation-duration: 1s; animation-name: fadeInRight;">
+				<h2 class="dark-text-small">Capture anything!</h2>
+				<p>Capturing an area of the screen, a window, or the full screen could not be made easier. With the fully customizable hot-keys you can assign any key to capture whatever image, whenever you want - even from a stylish web page.</p>
+			</div>
+		</div>
+	</div>
+</section>
+
+<!-- Export -->
+<section class="app box dark-gray-bg" id="export">
+	<div class="container">
+			<div class="row">
+				<div class="section-header wow fadeIn animated animated" data-wow-duration="1.0s" style="visibility: visible; animation-duration: 1s; animation-name: fadeIn;">
+					<h2 class="white-text">Exciting Export</h2>
+					<div class="section-description-white">
+						<p>When working with images, one often finds that they need to be converted in order to send to somebody else. If it’s not only the image format that needs converting but other various options as well, then , processing many images will requires a great deal of time and effort, making the work tedious.</p>
+					</div>
+				</div>
+				<div class="full-size-image wow fadeIn animated animated" style="visibility: visible; animation-name: fadeIn;">
+					<img src="images/pixave-export.jpg" alt="Pixave">
+				</div>
+				<div class="section-header wow fadeIn animated animated" data-wow-duration="1.0s" style="visibility: visible; animation-duration: 1s; animation-name: fadeIn;">
+					<div class="section-description-white">
+						<p>But now, thanks to Pixave’s advanced exporting capabilities, such tedium can be put to rest: the image format, size, name, and other various options can all be batch processed. In addition, images can be exported even into ePub format. As will be experienced through the resulting files and ePub documents, Pixave’s export feature is no basic converter.</p>
+					</div>
+				</div>
+			</div>
+	</div>
+</section>
+
+<!-- Viewer -->
+<section class="app box" id="viewer">
+	<div class="container">
+		<div class="row">
+			<div class="section-header wow fadeIn animated animated" data-wow-duration="1.0s" style="visibility: visible; animation-duration: 1s; animation-name: fadeIn;">
+				<h2 class="dark-text">All-around viewer</h2>
+				<div class="section-description">
+					<p>Pixave’s image displaying feature is not limited to only viewing images. Not only can you edit the metadata but you can also use the powerful, integrated OS X Yosemite’s Action Extension to edit images, animate GIFs and create multiple framed TIFFs, as well as view in detail specialized image files such as the ICNS.</p>
+				</div>
+			</div>
+			<div class="full-size-image">
+				<img src="images/pixave-image-viewer.jpg" alt="Pixave">
+			</div>
+			<div class="section-header wow fadeIn animated animated" data-wow-duration="1.0s" style="visibility: visible; animation-duration: 1s; animation-name: fadeIn;">
+				<div class="section-description">
+					<br>
+					<p>Plus, the built in PDF reader lets you easily view PDFs and save any page as a separate image. All these features are intuitively integrated into the interface, and are likely to make you say to yourself: <strong>“Wow, that’s amazing!”</strong></p>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<!-- Advanced features -->
+<section class="app features" id="features">
+	<div class="container">
+		<div class="section-header wow fadeIn animated animated" data-wow-duration="1.0s" style="visibility: visible; animation-duration: 1s; animation-name: fadeIn;">
+			<h2 class="dark-text">More features</h2>
+		</div>
+		<div class="row">
+			<div class="col-md-4 single-service wow fadeIn animated animated" data-wow-duration="1.0s" style="visibility: visible; animation-duration: 1s; animation-name: fadeIn;">
+				<div class="service-icon">
+					<img src="images/multiplibs.png" alt="Pixave">
+				</div>
+				<h4>Multiple Libraries</h4>
+				<p>Pixave supports multiple libraries. You can create libraries according to image types, date taken, and various other criteria, which can be easily transferred. Press the “Option” key when launch Pixave.</p>
+			</div>
+			<div class="col-md-4 single-service wow fadeIn animated animated" data-wow-duration="1.0s" style="visibility: visible; animation-duration: 1s; animation-name: fadeIn;">
+				<div class="service-icon">
+					<img src="images/collections.png" alt="Pixave">
+				</div>
+				<h4>Collections</h4>
+				<p>A pre-defined System Collection and a user-defined Collection are available. Akin to managing files with OS X Finder, you can manage your images in Pixave in the same way. The user Collection, folders, and Smart Collections will let you manage your images more conveniently.</p>
+			</div>
+			<div class="col-md-4 single-service wow fadeIn animated animated" data-wow-duration="1.0s" style="visibility: visible; animation-duration: 1s; animation-name: fadeIn;">
+				<div class="service-icon">
+					<img src="images/format.png" alt="Pixave">
+				</div>
+				<h4>Popular image formats supported</h4>
+				<p>JPEG, JPEG 2000, GIF (included Animated GIF), PNG, TIFF, ICNS, BMP, ICO, PSD, AI, EPS (included PDF info only), SVG, TGA, RAW Image, and almost all other image formats currently in use. With the extremely handy drag-and-drop feature, you can save an image exactly as you see it, in a flash, without a fuss.</p>
+			</div>
+			<div class="col-md-4 single-service wow fadeIn animated animated" data-wow-duration="1.0s" style="visibility: visible; animation-duration: 1s; animation-name: fadeIn;">
+				<div class="service-icon">
+					<img src="images/other_documents.png" alt="Pixave">
+				</div>
+				<h4>Affinity Designer, Affinity Photo, iDraw, Pixelmator, Sketch 3</h4>
+				<p>Pixave imports and integrates with Affinity Designer, Affinity Photo, iDraw, Pixelmator, Sketch 3 documents.</p>
+			</div>
+			<div class="col-md-4 single-service wow fadeIn animated animated" data-wow-duration="1.0s" style="visibility: visible; animation-duration: 1s; animation-name: fadeIn;">
+				<div class="service-icon">
+					<img src="images/export.png" alt="Pixave">
+				</div>
+				<h4>Various Export options</h4>
+				<p>Among Pixave’s many export options are - exporting to almost any format; freely sizing images according to pixel and scale; and exporting to ePub format to view on your iPhone, iPad, or Mac. </p>
+			</div>
+			<div class="col-md-4 single-service wow fadeIn animated animated" data-wow-duration="1.0s" style="visibility: visible; animation-duration: 1s; animation-name: fadeIn;">
+				<div class="service-icon">
+					<img src="images/yosemite.png" alt="Pixave">
+				</div>
+				<h4>OS X Yosemite built exclusively for Mac</h4>
+				<p>Retina Ready, Sharing, Notifications, Fullscreen, Multi-touch Gestures, Core Image, 64-bit Architecture, and many more of OS X Yosemite’s amazing features have been used to develop Pixave. Its power is bound to be felt.</p>
+			</div>
+		</div>
+	</div>
+</section>
+
+<!-- download -->
+<section class="download" id="download">
+<div class="solid-color">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-8 col-md-offset-2">
+				<div class="download-container">
+					<div class="section-header wow fadeIn animated animated" data-wow-duration="1.0s" style="visibility: visible; animation-duration: 1s; animation-name: fadeIn;">
+						<h2 class="white-text">Pixave</h2>
+						<h3 class="intro">The smartest way to organize your images</h3>
+						<p>Requires OS X 10.10 or later.</p>
+						<p>Available from the Mac App Store for $9.99</p>
+					</div>
+					<div class="wow fadeIn animated animated" data-wow-duration="1.0s" style="visibility: visible; animation-duration: 1s; animation-name: fadeIn;">			
+						<a href="https://itunes.apple.com/app/id924891282?mt=12" target="_blank" title="Get Pixave on Mac App Store"><img src="images/mac-app-store.png" alt="Download Pixave on the Mac App Store"></a>
+					</div>
+				</div>
+			</div> 
+		</div> 
+	</div>
+</div>
+</section>
+
+<!-- footer -->
+<footer class="support-and-feedback" id="support-and-feedback">
+	<div class="container">
+		<div class="section-header wow fadeIn animated" data-wow-duration="1.0s" style="visibility: hidden; animation-duration: 1s; animation-name: none;">
+			<div class="section-description">
+				We’re always here to help with any questions or comments — feel free to contact us.
+			</div>
+            <div class="contact-items row mb-60 mb-xs-40">
+                <div class="col-md-8 col-md-offset-2">
+                    <div class="row">
+                        <div class="col-sm-6 col-lg-4 pt-20 pb-20 pb-xs-0">
+                            <div class="contact-item twitter">
+								<a href="http://twitter.com/pixaveapp" title="Follow @Pixaveapp" target="_blank"><i class="social_twitter_square"></i> Follow @Pixaveapp</a>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-lg-4 pt-20 pb-20 pb-xs-0">
+                            <div class="contact-item mail">
+                                <a href="mailto:support@littlehj.com"><i class="icon_mail"></i> support@littlehj.com</a>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-lg-4 pt-20 pb-20 pb-xs-0">
+                            <div class="contact-item help">
+                                <a href="http://littlehj.com/wordpress/?page_id=6"><i class="icon_book"></i> Pixave Help</a>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-lg-4 pt-20 pb-20 pb-xs-0">
+                            <div class="contact-item releaseNotes">
+                                <a href="http://www.littlehj.com/wordpress/?page_id=4"><i class="icon_document"></i> Release Notes</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+		</div>
+		<p class="copyright">© 2003–2015 LittleHJ. All Rights Reserved.</p>
+	</div>
+</footer>
+
+<script src="js/bootstrap.min.js"></script>
+<script src="js/jquery.scrollTo.min.js"></script>
+<script src="js/jquery.localScroll.min.js"></script>
+<script src="js/wow.min.js"></script>
+<script src="js/retina.min.js"></script>
+<script src="js/jquery.nav.js"></script>
+<script src="js/matchMedia.js"></script>
+<script src="js/custom.js"></script>
+
+
+
+</body><iframe allowtransparency="true" frameborder="0" id="abs-top-frame" src="chrome-extension://flliilndjeohchalpbbcdekjklbdgfkk/html/top.html?1438886883485#minimized" style="position: fixed !important; z-index: 4294967295 !important; overflow: hidden !important; top: 0px !important; left: 0px !important; right: 0px !important; width: 138px !important; height: 13px !important; max-height: none !important; min-height: 0px !important; margin: 0px auto !important; padding: 0px !important; border: 0px !important; display: block !important; background-color: transparent !important;"></iframe></html>

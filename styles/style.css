@@ -22,8 +22,8 @@ p, tr {
 }
 
 .number {
-    font-size: 100%;
-    color: #33CC33;
+    font-size:100%;
+    color:#33CC33;
 }
 
 h1 {
@@ -41,7 +41,7 @@ h2 {
 }
 
 a {
-    font-size:170%;
+    font-size:190%;
 }
 
 .col-md-4 {
@@ -54,10 +54,5 @@ table {
 }
 
 .other {
-    font-size:120%;
-    padding:40px;
-}
-
-section {
-    padding:50px;
+    font-size:90%;
 }

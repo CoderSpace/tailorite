@@ -5,3 +5,7 @@ url('https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css');
     position:fixed;
     z-index:2;
 }
+
+.navbar-default {
+    min-height:60px;
+}

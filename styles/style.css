@@ -1,20 +1,24 @@
-
-
 .logo {
     width:50%;
     float:left;
+}
+
+#overview, #about, #services, #prices, #testimonials, #employees, #order,#questions {
+    min-height:100vh;
 }
 
 .bg-blue {
     background-color:#013F88;
     color:white;
     padding:30px;
+    height: 100%;
 }
 
 .bg-white {
     background-color:white;
     color:black;
     padding:30px;
+    height: 100%;
 }
 
 h3 {
@@ -30,6 +34,13 @@ p, tr {
     line-height:2;
     text-align:left;
     font-family: 'Vollkorn', serif;
+    
+    opacity: 1;
+   -webkit-transition: opacity 2s ease-in;
+   -moz-transition: opacity 2s ease-in;
+   -o-transition: opacity 2s ease-in;
+   -ms-transition: opacity 2s ease-in;
+   transition: opacity 2s ease-in;
 }
 
 .number {

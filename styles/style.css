@@ -21,13 +21,13 @@
     height: 100%;
 }
 
-h3 {
-    font-size:200%;
-    text-align:center;
-    margin:40px;
-    color:#33CC33;
-    font-family: 'Lora', serif;
-}
+/*h3 {*/
+/*    font-size:200%;*/
+/*    text-align:center;*/
+/*    margin:40px;*/
+/*    color:#CCD6EB;*/
+/*    font-family: 'Lora', serif;*/
+/*}*/
 
 p, tr {
     font-size:150%;
@@ -50,7 +50,7 @@ p, tr {
 
 h1 {
     font-family: 'Lora', serif;
-    font-size:240%;
+    font-size:290%;
     text-align:center;
     margin-bottom:40px;
 }

@@ -72,6 +72,12 @@ a {
     text-align:center;
 }
 
+.col-md-3 {
+    border-style:solid;
+    border-color:white;
+    margin:10px;
+}
+
 table {
     margin-left:20px;
     width: 100%;

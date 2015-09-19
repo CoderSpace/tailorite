@@ -42,10 +42,42 @@ p, tr {
 }
 
 .locations {
-    text-align: center;
-    border-style:solid;
-    border-color:#6384A5;
-    border-width:7px;
+	border: none; /* this removes the border that was on the .locations class for each <p> */
+    display: flex; /* adds flexbox to the wrapper div */
+    flex-wrap: nowrap; /* doesn't let the locations divs wrap to a new line when the screen is too narrow */
+    justify-content: space-around; /* distributes any space around the locations divs evenly, so there's no extra space at the end and there's the same amount of space in between each one */
+    align-items: center; /* this centers the <div> tags in addition to having the space around them evenly distributed, but it doesn't center the text inside since that's not what we want */
+    
+}
+
+.locations div {
+    flex-grow: 1; /* this gets applied to all of the locations <div>s and it makes them always be the same size */
+    display: flex; /* now i'm using the locations <div> as a wrapper for the <p> tags inside, so now I can use flexbox on the <p> tags */
+    justify-content: center; /* this centers the <p> tags inside their <div>s but it doesn't make the text be centered. So I don't have to use text-align center and I don't have to use margin: auto which requires a width (and we wouldn't be able to add a width because we have no way of knowing what's the right width for different screen sizes) ; */
+    border-right: solid 1px #6384A5; /* this adds a line in between each box */
+}
+
+.locations div:last-child {
+    border-right: none;  /* this takes the line off the last box */
+}
+
+/*Now, since I'm not letting the boxes wrap to a new line, when the screen gets too small for all of the locations to be on one line, I change up the rules*/
+
+@media (max-width: 850px) {
+
+	.locations {
+		flex-direction: column; /* putting all of the locations in a column instead of in one row */
+	}
+
+	.locations div {
+    	border-right: none; /* taking the right border off of everything */
+    	border-bottom: solid 1px #6384A5; /* adding a bottom border to everything instead */
+    	padding: 1.5em 0; /* I just thought there should be more top and bottom space between each div when it's in a column */
+	}
+
+	.locations div:last-child {
+    	border-bottom: none; /* taking the bottom border off the last one */
+	}
 }
 
 .number {
@@ -58,6 +90,7 @@ h1 {
     font-size:290%;
     text-align:center;
     margin-bottom:40px;
+    margin:20px;
 }
 
 h2 {
@@ -66,6 +99,7 @@ h2 {
     text-align:center;
     font-style:italic;
     margin-bottom:40px;
+    margin:30px;
 }
 
 h3 {
@@ -73,6 +107,7 @@ h3 {
     font-size:230%;
     text-align:center;
     margin-bottom:40px;
+    margin:30px;
 }
 
 a {

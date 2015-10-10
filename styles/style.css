@@ -21,6 +21,9 @@
     height: 100%;
 }
 
+a:link{
+    color:#33CC33;
+}
 
 p, tr {
     font-size:150%;
@@ -59,6 +62,10 @@ p, tr {
 
 .locations div:last-child {
     border-right: none;  /* this takes the line off the last box */
+}
+
+#locations {
+     border-right: solid 1px #6384A5; /* this adds a line in between each box */
 }
 
 /*Now, since I'm not letting the boxes wrap to a new line, when the screen gets too small for all of the locations to be on one line, I change up the rules*/

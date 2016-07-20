@@ -1,0 +1,37 @@
+@import 'https://fonts.googleapis.com/css?family=Lora';
+
+h2, 
+div, 
+.desc, 
+.field {
+  font-family: 'Lora', serif;
+  color:white;
+}
+
+.button {
+    background-color:white;
+    border: none;
+border-radius: 10%;
+    color:#33CC33;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+
+.button:hover {
+    background-color:#33CC33;
+    border:none;
+border-radius: 10%;
+    color:white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+
+.wufoo-r1brah1f0c48kth {
+  background-color:#013F88;
+}

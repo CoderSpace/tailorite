@@ -171,3 +171,11 @@ table {
     margin-right: auto;
     height:160px;
 }
+
+.embed #container {
+    width: 100% !important;
+    border: none !important;
+    background: #013F88;
+    -o-box-shadow: none !important;
+    box-shadow: none !important;
+}

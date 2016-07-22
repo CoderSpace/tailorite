@@ -1,37 +1,114 @@
 @import 'https://fonts.googleapis.com/css?family=Lora';
-
-h2, 
-div, 
-.desc, 
-.field {
+ 
+/*this is the font for the button  */
+ 
+body{
   font-family: 'Lora', serif;
   color:white;
 }
-
-.button {
-    background-color:white;
-    border: none;
-border-radius: 10%;
-    color:#33CC33;
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
+ 
+.safari input.btTxt{
+  font-size:250%;
 }
-
-.button:hover {
-    background-color:#33CC33;
-    border:none;
-border-radius: 10%;
-    color:white;
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
+ 
+/*this is the button styling */
+ 
+form li.buttons input{
+  color: white;
+  background-color:#33CC33;
+   width:200px;
+   height:50px;
+  border-radius:12px;
+  font-size:18px;
+  border:none;
 }
-
-.wufoo-r1brah1f0c48kth {
+ 
+.wufoo label.desc, .wufoo legend.desc, #header.info, p {
+  font-family: 'Lora', serif;
+  font-size:18px;
+  color:white;
+}
+ 
+.wufoo, .info, h2, li.first, {
+    font-size: 160%;
+    font-family: 'Lora', serif;
+    font-style: normal;
+    font-weight: normal;
+    color: white;
+}
+ 
+form li.buttons input:hover{
+  background-color:white;
+  color:black;
+  cursor: pointer;
+}
+ 
+.desc{
+  font-family: 'Lora', serif;
+  color:white;
+}
+ 
+span{
+  color:white;
+  font-family: 'Lora', serif;
+}
+ 
+#container {
   background-color:#013F88;
+}
+ 
+.wufoo .info h2 {
+    font-size: 160%;
+    font-family: inherit;
+    font-style: normal;
+    font-weight: normal;
+    color: white;
+}
+ 
+.wufoo .info {
+    font-size: 95%;
+    font-family: inherit;
+    font-style: normal;
+    font-weight: normal;
+    color: white;
+}
+ 
+.wufoo .section h3 {
+    font-size: 110%;
+    font-family: inherit;
+    font-style: normal;
+    font-weight: normal;
+    color: white;
+}
+ 
+.wufoo .section {
+    font-size: 85%;
+    font-family: inherit;
+    font-style: normal;
+    font-weight: normal;
+    color: white;
+}
+ 
+.wufoo .section {
+    font-size: 85%;
+    font-family: inherit;
+    font-style: normal;
+    font-weight: normal;
+    color: white;
+}
+ 
+.wufoo .section {
+    font-size: 85%;
+    font-family: inherit;
+    font-style: normal;
+    font-weight: normal;
+    color: white;
+}
+ 
+.wufoo label.choice {
+    font-size: 100%;
+    font-family: inherit;
+    font-style: normal;
+    font-weight: normal;
+    color: white;
 }

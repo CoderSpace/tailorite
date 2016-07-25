@@ -112,3 +112,19 @@ span{
     font-weight: normal;
     color: white;
 }
+
+.embed #container {
+    width: 100% !important;
+    border: none !important;
+    background: #013F88;
+    -o-box-shadow: none !important;
+    box-shadow: none !important;
+}
+
+.wufoo .info div {
+    font-size: 95%;
+    font-family: inherit;
+    font-style: normal;
+    font-weight: normal;
+    color: white;
+}

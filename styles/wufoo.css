@@ -128,3 +128,16 @@ span{
     font-weight: normal;
     color: white;
 }
+
+.wufoo .section div {
+    font-size: 85%;
+    font-family: inherit;
+    font-style: normal;
+    font-weight: normal;
+    color: white;
+}
+
+.wufoo li span label {
+    font-family: inherit;
+    color: white;
+}

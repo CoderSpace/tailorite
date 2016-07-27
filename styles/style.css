@@ -88,6 +88,7 @@ p, tr {
 }
 
 .number {
+    font-family: 'Lora', serif;
     font-size:100%;
     color:#33CC33;
 }

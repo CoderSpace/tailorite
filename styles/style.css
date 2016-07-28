@@ -121,7 +121,7 @@ h3 {
 
 a {
     font-size:100%;
-    font-family: 'Droid Sans', sans-serif;
+    font-family: 'Lora', serif;
 }
 
 .nav, .navbar-nav {
@@ -167,7 +167,6 @@ table {
     margin-right: auto
 }
 
-.big {
     display: block;
     margin-left: auto;
     margin-right: auto;
